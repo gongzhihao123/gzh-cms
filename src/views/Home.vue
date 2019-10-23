@@ -1,13 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    {{this.msg}}
+    <Menu></Menu>
+    <div class="main">
+      <topShow></topShow>
+      <div class="routerNaviga">路由导航</div>
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+import Menu from './../components/common/menu.vue'
+import topShow from './../components/common/topShow.vue'
 import axios from 'axios'
 export default {
   name: 'home',
@@ -15,6 +21,10 @@ export default {
     return {
       msg: ''
     }
+  },
+  components: {
+    Menu,
+    topShow
   },
   created () {
     axios.get('/news/index')
@@ -24,3 +34,20 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+  .home {
+    .menu {
+      float: left;
+      width: 200px;
+    }
+    .main {
+      width: 100%;
+      margin-left: 200px;
+      border-left: 1px solid #ccc;
+      .routerNaviga {
+        height: 60px;
+        background: #666;
+      }
+    }
+  }
+</style>

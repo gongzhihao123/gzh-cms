@@ -1,11 +1,13 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from './layout/App.vue'
 import router from './router/index'
-import store from './store'
+import store from './store/index.js'
+import './assets/scss/index.scss'
+import './plugins/elementui'
 
 Vue.config.productionTip = false
 
-require('./mock.js')
+require('./plugins/mock.js')
 
 new Vue({
   router,
