@@ -4,6 +4,7 @@ import router from './router/index'
 import store from './store/index.js'
 import './assets/scss/index.scss'
 import './plugins/elementui'
+import './plugins/highcharts'
 
 Vue.config.productionTip = false
 

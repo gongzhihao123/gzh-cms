@@ -41,9 +41,10 @@ export default {
       width: 200px;
     }
     .main {
-      width: 100%;
       margin-left: 200px;
+      overflow: auto;
       border-left: 1px solid #ccc;
+      height: 100vh;
       .routerNaviga {
         height: 60px;
         background: #666;
